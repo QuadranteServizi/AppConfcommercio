@@ -91,16 +91,28 @@ function receivedEvent(id) {
         }
         
         function onConfirm(button,id,platform) {
+        
+          var loc="";
+          
+          if(id=="rassegna"){
+            loc="rassegna-stampa.html";
+          }else
+          if(id=="commercio"){
+            loc="il-commercio-veronese.html";
+          }else{
+            loc="apri.html?notify_id="+id;
+          }
+          
           
           if(platform=='android'){
             if(button==2){
-              window.location.replace("apri.html?notify_id="+id);
+              window.location.replace(loc);
             }else{
               window.location.replace("menu.html");  //ricorda che nella schermata di login non ci sono le notifiche
             }
           }else{
             if(button==1){
-              window.location.replace("apri.html?notify_id="+id);
+              window.location.replace(loc);
             }else{
               window.location.replace("menu.html");  //ricorda che nella schermata di login non ci sono le notifiche
             }
