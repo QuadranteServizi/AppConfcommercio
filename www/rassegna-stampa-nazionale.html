@@ -15,8 +15,8 @@
                    
   </head>            
   <body class="corpo" onload="init()">         
-    <h1 class="titolo">Rassegna Stampa Locale</h1>    
-    <p align="center">Ecco la rassegna stampa a cura dell'Ufficio Stampa di Confcommercio Verona
+    <h1 class="titolo">Rassegna Stampa Nazionale</h1>    
+    <p align="center">Ecco la rassegna stampa a cura di Confcommercio Imprese per l'Italia
     </p>      
 <script>  
       if (window.XMLHttpRequest)
@@ -34,7 +34,7 @@
           document.getElementById("rssOutput").innerHTML=xmlhttp.responseText;
           }
         } 
-      xmlhttp.open("GET","http://www.confcommercioverona.it/app/getrss.php?q=rassegnastampa",true);
+      xmlhttp.open("GET","http://www.confcommercioverona.it/app/getrss.php?q=rassegnastampanazionale",true);
       xmlhttp.send();
       </script>    
     <div id="rssOutput">Caricamento...     
