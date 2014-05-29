@@ -205,7 +205,6 @@ function receivedEvent(id) {
 //Funzioni generiche
 
 function deviceReady() {
-  StatusBar.overlaysWebView(false);
   addNotify(); 
 } 
 function onOffline() { 

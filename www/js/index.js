@@ -53,7 +53,6 @@ function handleLogin() {
 //Funzioni generiche
 
 function deviceReady() {
-  StatusBar.overlaysWebView(false);
   document.getElementById("launcherPage").style.display = "none";
   checkPreAuth(); 
 }
