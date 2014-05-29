@@ -1,5 +1,4 @@
 function init() {
-  StatusBar.overlaysWebView(false);
 	document.addEventListener("deviceready", deviceReady, true);
   document.addEventListener("offline", onOffline, false);
 	delete init;
@@ -54,6 +53,7 @@ function handleLogin() {
 //Funzioni generiche
 
 function deviceReady() {
+  StatusBar.overlaysWebView(false);
   document.getElementById("launcherPage").style.display = "none";
   checkPreAuth(); 
 }

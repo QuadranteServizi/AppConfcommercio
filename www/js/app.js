@@ -1,5 +1,4 @@
 function init() {
-  StatusBar.overlaysWebView(false);
 	document.addEventListener("deviceready", deviceReady, true);
   document.addEventListener("offline", onOffline, false);
 	delete init;
@@ -206,6 +205,7 @@ function receivedEvent(id) {
 //Funzioni generiche
 
 function deviceReady() {
+  StatusBar.overlaysWebView(false);
   addNotify(); 
 } 
 function onOffline() { 
