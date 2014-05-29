@@ -13,27 +13,30 @@
 <script type="text/javascript" src="template.js"></script>                          
   </head>               
   <body class="corpo" onload="init()">         
-    <h1 class="titolo">Video</h1>        
-   <style>
-     .resp img{
-      max-width:100% !important;
-      max-height:100% !important;
-      display:block;
-      align: center;
-  }
-  </style>
-    <div align="center">
+    <h1 class="titolo">Video Youtube</h1>      
 
-        <a href="video_yt.html">
-        Youtube    <br>
-          <div class="resp"><img src="img/yt.png" ></div>
-        </a>
-        <br>
-        <a href="video_conftv.html">
-        Confcommercio TV  <br>
-          <div class="resp"><img src="img/tv.png" ></div>
-        </a>
-       
+<script>  
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp2=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp2=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp2.onreadystatechange=function()
+  {
+  if (xmlhttp2.readyState==4 && xmlhttp2.status==200)
+    {
+    document.getElementById("rssOutput2").innerHTML=xmlhttp2.responseText;
+    }
+  } 
+xmlhttp2.open("GET","http://www.confcommercioverona.it/app/getrss.php?q=video",true);
+xmlhttp2.send(); 
+</script>   
+    <p>I video di Confcommercio Verona dal canale Youtube
+    </p>
+    <div id="rssOutput2">Caricamento Youtube...
     </div>
   </body>
 </html>

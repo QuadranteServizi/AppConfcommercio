@@ -1,4 +1,5 @@
 function init() {
+  StatusBar.overlaysWebView(false);
 	document.addEventListener("deviceready", deviceReady, true);
   document.addEventListener("offline", onOffline, false);
 	delete init;
