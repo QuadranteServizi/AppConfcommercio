@@ -54,6 +54,12 @@ function handleLogin() {
 
 function deviceReady() {
   document.getElementById("launcherPage").style.display = "none";
+  if (navigator.userAgent.match(/(iPad.*|iPhone.*|iPod.*);.*CPU.*OS 7_\d/i)) {
+    $("body").addClass("ios7");
+    $("body").append('
+    
+    ');
+  }
   checkPreAuth(); 
 }
 function onOffline() {
