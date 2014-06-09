@@ -43,7 +43,7 @@ function abilitaNotifiche(){
         // close InAppBrowser after 5 seconds
         setTimeout(function() {
            ref.close();
-        }, 5000);  
+        }, 500);  
 }
 
 function disabilitaNotifiche(){
@@ -56,7 +56,7 @@ function disabilitaNotifiche(){
         // close InAppBrowser after 5 seconds
         setTimeout(function() {
            ref.close();
-        }, 5000);  
+        }, 500);  
 }
 
 
@@ -87,7 +87,7 @@ function receivedEvent(id) {
           // close InAppBrowser after 5 seconds
           setTimeout(function() {
             ref.close();
-          }, 5000);
+          }, 500);
         }
         
         function onConfirm(button,id,platform) {
@@ -165,7 +165,7 @@ function receivedEvent(id) {
                     // close InAppBrowser after 5 seconds
                     setTimeout(function() {
                       ref.close();
-                    }, 5000);     
+                    }, 500);     
                     //alert("RegistrationId= "+registrationId);
     
                   }
