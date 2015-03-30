@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>                         
+  <head>                                           
+    <meta charset="utf-8" />                                           
+    <meta name="viewport" content="width=device-width, user-scalable=no">                                           
+    <link type="text/css" rel="stylesheet" href="css/custom.css">                                           
+    <title>Confcommercio Verona                                   
+    </title>      	       
+<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>                      
+<script type="text/javascript" src="js/PushNotification.js"></script>                      
+<script type="text/javascript" src="js/des.js"></script>               	       
+<script type="text/javascript" src="js/index.js"></script>                       
+<script type="text/javascript" src="template_login.js"></script>                                          
+  </head>                           
+  <body class="corpo" onload="init()">    
+    
+
+<h1 class="titolo">Configurazione</h1>
+       <div align="center">
+       <p>Impostazione delle credenziali di accesso al sito web www.confcommercioverona.it</p> <br>
+
+<div id="launcherPage">
+  <p align="center"></p>
+	<!-- I'm just here waiting for deviceReady -->
+</div>
+
+<div id="loginPage" >
+
+    <div data-role="content">    
+
+        <form id="loginForm" onsubmit="handleLogin()">
+        
+            <label for="username"></label>
+            <input type="text" name="username" id="username" value="" placeholder="Username" autocapitalize="off" class="login" />
+            <br>
+            <label for="password"></label>
+            <input type="password" name="password" id="password" value="" placeholder="Password" autocapitalize="off" class="login"/>
+            <br>
+        <input type="submit" value="Accedi" id="submitButton"  class="login" >
+        </form>
+        
+    </div>
+
+    
+
+</div>
+
+</body>
+</html>

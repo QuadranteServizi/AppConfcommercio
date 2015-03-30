@@ -1,49 +1,62 @@
 <!DOCTYPE html>
-<html>                         
-  <head>                                           
-    <meta charset="utf-8" />                                           
-    <meta name="viewport" content="width=device-width, user-scalable=no">                                           
-    <link type="text/css" rel="stylesheet" href="css/custom.css">                                           
-    <title>Confcommercio Verona                                   
-    </title>      	       
-<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>                      
-<script type="text/javascript" src="js/PushNotification.js"></script>                      
-<script type="text/javascript" src="js/des.js"></script>               	       
-<script type="text/javascript" src="js/index.js"></script>                       
-<script type="text/javascript" src="template_login.js"></script>                                          
-  </head>                           
-  <body class="corpo" onload="init()">    
-    
-
-<h1 class="titolo">Configurazione</h1>
-       <div align="center">
-       <p>Impostazione delle credenziali di accesso al sito web www.confcommercioverona.it</p> <br>
-
-<div id="launcherPage">
-  <p align="center"></p>
-	<!-- I'm just here waiting for deviceReady -->
-</div>
-
-<div id="loginPage" >
-
-    <div data-role="content">    
-
-        <form id="loginForm" onsubmit="handleLogin()">
-        
-            <label for="username"></label>
-            <input type="text" name="username" id="username" value="" placeholder="Username" autocapitalize="off" class="login" />
-            <br>
-            <label for="password"></label>
-            <input type="password" name="password" id="password" value="" placeholder="Password" autocapitalize="off" class="login"/>
-            <br>
-        <input type="submit" value="Accedi" id="submitButton"  class="login" >
-        </form>
-        
-    </div>
-
-    
-
-</div>
-
+<html>    
+  <head>        
+    <meta charset="utf-8" />        
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">              
+    <link type="text/css" rel="stylesheet" href="css/custom2.css">   
+    <title>Confcommercio Verona
+    </title>      	
+<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>        
+<script type="text/javascript" src="js/PushNotification.js"></script>        
+<script type="text/javascript" src="js/des.js"></script>        	
+<script type="text/javascript" src="js/app.js"></script>         
+<script type="text/javascript" src="template2.js"></script>              
+  </head>      
+  <body class="corpo" onload="init()">      
+  <div id="menu">        
+     <div id="logo-wrap"><img src="img/logo_big.png" alt="Confcommercio Verona"></div>
+        <ul>
+        <li>          
+        <a href="apri.html?news_id=2471">Le nostre sedi</a>          
+        </li>                   
+        <li>          
+        <a href="rassegna-stampa.html">Rassegna Stampa</a>          
+        </li>  
+        <li>          
+        <a href="news-dal-sito.html">News dal sito</a>          
+        </li> 
+        <li>          
+        <a href="apri.html?news_id=2469">Convenzioni per gli associati</a>          
+        </li>
+        <li>          
+        <a href="il-commercio-veronese.html">Il Commercio Veronese</a>          
+        </li>                 
+        <li>           
+        <a href="video.html">Video</a>          
+        </li>  
+         <li>          
+        <a href="corsi.html"><font color="#6699FF">Corsi di formazione</font></a>          
+        </li>  
+         <li>          
+        <a href="servizi.html"><font color="#6699FF">Servizi alle imprese</font></a>          
+        </li>                              
+      </ul>                         
+    </div> 
+     <br><br><br><br><br>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="js/jquery.backstretch.js"></script>
+  <script>
+        $.backstretch([
+          "http://www.confcommercioverona.it/app/bg_images/foto-1.jpg",
+          "http://www.confcommercioverona.it/app/bg_images/foto-2.jpg",
+          "http://www.confcommercioverona.it/app/bg_images/foto-3.jpg",
+          "http://www.confcommercioverona.it/app/bg_images/foto-4.jpg",
+          "http://www.confcommercioverona.it/app/bg_images/foto-5.jpg"     
+        ], {
+            fade: 750,
+            duration: 4000
+        });
+    </script>          
 </body>
 </html>

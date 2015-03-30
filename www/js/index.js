@@ -54,7 +54,9 @@ function handleLogin() {
 
 function deviceReady() {
   document.getElementById("launcherPage").style.display = "none";
-  checkPreAuth(); 
+  //il 30/03/15 viene richiesta la possibilità di accedere senza password. Il tutto viene comunque mantenuto ma non utilizzato
+  window.location.replace("menu.html"); 
+  //checkPreAuth(); 
 }
 function onOffline() {
   window.location.replace("offline.html");
