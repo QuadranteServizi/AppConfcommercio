@@ -43,7 +43,11 @@
     var news_id = getUrlVars()["news_id"];
     var corsi_id = getUrlVars()["corsi_id"];
     var notify_id = getUrlVars()["notify_id"];
+    var esperto = getUrlVars()["esperto"];
   
+  if (esperto){
+      xmlhttp.open("GET","http://www.confcommercioverona.it/app/getrss.php?q=esperto-"+esperto+"",true);
+  }else      
   if (elle){  
     xmlhttp.open("GET","http://www.confcommercioverona.it/app/getrss.php?q=primepagine&l="+elle+"",true);
   }else
