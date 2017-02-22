@@ -1,5 +1,4 @@
 function init() {
-  document.addEventListener("pause", onPause, false);
 	document.addEventListener("deviceready", deviceReady, true);
   document.addEventListener("offline", onOffline, false); 
 	delete init;
@@ -213,11 +212,24 @@ function deviceReady() {
 function onOffline() { 
   window.location.replace("offline.html"); 
 }
-@Override
-public void onPause() {
-    super.onPause();
-    myCustomWebView.onPause();
-     if (typeof document.app.player != "undefined") {
-    document.app.player.pauseVideo();
-  }
+
+var globalIABref;
+var isAndroid = device.platform === "Android";
+
+/* in html:
+<li class="menu"><a href="#" onclick="openVideoWindow('http://m.youtube.com/watch?v=Yj1x9p3GU1E', '_blank', 'enableViewportScale=yes');">
+ */
+function openVideoWindow(url, target, options) {
+    globalIABref = cordova.inAppBrowser.open(url, target, options);
 }
+function onpause() {
+
+    if (globalIABref && isAndroid) {
+        globalIABref.executeScript({code: "location.href='about:blank';"});
+        // if there's a chance the IAB is visible, you might also want to hide it, 
+        // since the webpage is now blank
+        globalIABref.close();
+        globalIABref = null;
+    }
+}
+document.addEventListener("pause", onpause, false);
