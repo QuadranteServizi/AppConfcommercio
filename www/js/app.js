@@ -217,4 +217,7 @@ function onOffline() {
 public void onPause() {
     super.onPause();
     myCustomWebView.onPause();
+     if (typeof document.app.player != "undefined") {
+    document.app.player.pauseVideo();
+  }
 }
