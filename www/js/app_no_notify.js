@@ -1,6 +1,7 @@
 function init() {
 	document.addEventListener("deviceready", deviceReady, true);
   document.addEventListener("offline", onOffline, false);
+  document.addEventListener("pause", onPause, false);
 	delete init;
 }
 
@@ -40,4 +41,13 @@ function deviceReady() {
 } 
 function onOffline() { 
   window.location.replace("offline.html"); 
+}
+
+@Override
+public void onPause() {
+    super.onPause();
+    myCustomWebView.onPause();
+     if (typeof document.app.player != "undefined") {
+    document.app.player.pauseVideo();
+  }
 }
