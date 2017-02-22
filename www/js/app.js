@@ -204,6 +204,12 @@ function receivedEvent(id) {
 
 //Funzioni generiche
 
+@Override
+public void onPause() {
+    super.onPause();
+    myCustomWebView.onPause();
+}
+
 function deviceReady() {
   addNotify(); 
 } 
