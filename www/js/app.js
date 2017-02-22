@@ -1,6 +1,7 @@
 function init() {
 	document.addEventListener("deviceready", deviceReady, true);
   document.addEventListener("offline", onOffline, false);
+  document.addEventListener("pause", onPause, false);
 	delete init;
 }
 
@@ -204,15 +205,16 @@ function receivedEvent(id) {
 
 //Funzioni generiche
 
-@Override
-public void onPause() {
-    super.onPause();
-    myCustomWebView.onPause();
-}
+
 
 function deviceReady() {
   addNotify(); 
 } 
 function onOffline() { 
   window.location.replace("offline.html"); 
+}
+@Override
+public void onPause() {
+    super.onPause();
+    myCustomWebView.onPause();
 }
