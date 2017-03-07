@@ -74,7 +74,7 @@ function receivedEvent(id) {
          //   alert('Callback Success! Result = '+result)
         }
         function errorHandler(error) {
-            alert('errorHandler = '+error);
+            //alert('errorHandler = '+error);
         }
         function tokenHandler(result) {    
           //Quando il token è pronto lo inserisco nel database delle notifiche
