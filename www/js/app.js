@@ -29,7 +29,7 @@ function addNotify(){
     }catch(err){ 
         txt="There was an error on this page.\n\n"; 
         txt+="Error description: " + err.message + "\n\n"; 
-        alert(txt); 
+        //alert(txt); 
     }
 }
 
@@ -74,7 +74,7 @@ function receivedEvent(id) {
          //   alert('Callback Success! Result = '+result)
         }
         function errorHandler(error) {
-            alert(error);
+            alert('errorHandler = '+error);
         }
         function tokenHandler(result) {    
           //Quando il token è pronto lo inserisco nel database delle notifiche
